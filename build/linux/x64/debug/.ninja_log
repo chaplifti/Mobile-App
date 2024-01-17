@@ -1,0 +1,83 @@
+# ninja log v5
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/libflutter_linux_gtk.so	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_engine.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_call.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_response.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_value.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_view.h	c5051e38baeba280
+0	40886	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/flutter_linux.h	c5051e38baeba280
+0	40886	0	flutter/_phony_	c5051e38baeba280
+40886	61292	1705412606513035569	CMakeFiles/rc_fl_gopoolar.dir/main.cc.o	e97c1275f3bb4a01
+40888	61311	1705412606513035569	CMakeFiles/rc_fl_gopoolar.dir/flutter/generated_plugin_registrant.cc.o	4b090094ff3fd1bc
+40889	63442	1705412608676274630	plugins/smart_auth/CMakeFiles/smart_auth_plugin.dir/smart_auth_plugin.cc.o	3c3277d05b570868
+40886	63556	1705412608780238475	CMakeFiles/rc_fl_gopoolar.dir/my_application.cc.o	88fcb5752625daff
+63442	63757	1705412608992164774	plugins/smart_auth/libsmart_auth_plugin.so	f2e67902186e0786
+63757	64067	1705412609304057606	intermediates_do_not_run/rc_fl_gopoolar	ecde8cb92eb8b34c
+64067	65859	0	CMakeFiles/install.util	f67a1609f43a00e0
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/libflutter_linux_gtk.so	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_engine.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_call.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_response.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_value.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_view.h	c5051e38baeba280
+42	7945	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/flutter_linux.h	c5051e38baeba280
+42	7945	0	flutter/_phony_	c5051e38baeba280
+7971	8482	1705413709836423674	plugins/smart_auth/libsmart_auth_plugin.so	f786430e3f39ae6a
+7954	9488	1705413710840903977	CMakeFiles/rc_fl_gopoolar.dir/flutter/generated_plugin_registrant.cc.o	4b090094ff3fd1bc
+7946	9597	1705413710948955540	CMakeFiles/rc_fl_gopoolar.dir/my_application.cc.o	88fcb5752625daff
+9597	9957	1705413711309125648	intermediates_do_not_run/rc_fl_gopoolar	c08eb7dda0844073
+9957	10467	0	CMakeFiles/install.util	f67a1609f43a00e0
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/libflutter_linux_gtk.so	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_engine.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_call.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_method_response.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_value.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/fl_view.h	c5051e38baeba280
+6	15171	0	/home/sydney/OffJob/CHAP LIFT/linux/flutter/ephemeral/flutter_linux/flutter_linux.h	c5051e38baeba280
+6	15171	0	flutter/_phony_	c5051e38baeba280
+15172	16177	1705432826290375937	CMakeFiles/rc_fl_gopoolar.dir/flutter/generated_plugin_registrant.cc.o	4b090094ff3fd1bc
+15172	16266	1705432826378375288	CMakeFiles/rc_fl_gopoolar.dir/my_application.cc.o	88fcb5752625daff
+16266	16647	1705432826762372452	intermediates_do_not_run/rc_fl_gopoolar	c08eb7dda0844073
+16647	17029	0	CMakeFiles/install.util	f67a1609f43a00e0
