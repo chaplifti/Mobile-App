@@ -47,6 +47,7 @@ dependencies:
   #custom packages
   lottie:
   rename:
+  loading_animation_widget:
 
 dev_dependencies:
   flutter_test:
