@@ -20,7 +20,7 @@ const Color darkBlueColor = Color(0xFF1E4799);
 const Color darkGreenColor = Color(0xFF1E996D);
 const Color darkRedColor = Color(0xFFD2182D);
 
-const double fixPadding = 10.0;
+const double fixPadding = 7.0;
 
 const SizedBox heightSpace = SizedBox(height: fixPadding);
 const SizedBox height5Space = SizedBox(height: 5.0);

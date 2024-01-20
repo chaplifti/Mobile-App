@@ -31,8 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
   TextEditingController dateAndTimeController = TextEditingController();
   TextEditingController noOfSeatController = TextEditingController();
 
-  static const CameraPosition _currentPosition =
-      CameraPosition(target: LatLng(51.507351, -0.127758), zoom: 12);
+  static const CameraPosition _currentPosition = CameraPosition(
+      target: LatLng(-6.886282370427649, 39.27507082065268), zoom: 11);
 
   final tabList = ["Find ride", "Offer ride"];
 
@@ -129,7 +129,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            Padding(
+            heightSpace,
+            heightSpace,
+            /*Padding(
               padding: const EdgeInsets.all(fixPadding * 2.0),
               child: Container(
                 width: double.infinity, // Set width to full width
@@ -168,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-            ),
+            ),*/
             selectedTab == 0 ? findRideButton() : continueButton()
           ],
         ),
@@ -868,7 +870,7 @@ class _HomeScreenState extends State<HomeScreen> {
       height: double.maxFinite,
       width: size.width,
       child: GoogleMap(
-        mapType: MapType.terrain,
+        mapType: MapType.normal,
         initialCameraPosition: _currentPosition,
         onMapCreated: mapCreated,
         zoomControlsEnabled: false,
@@ -916,7 +918,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width5Space,
                   Expanded(
                     child: Text(
-                      "Mumbai",
+                      "Dar es Salaam",
                       style: medium14White,
                       overflow: TextOverflow.ellipsis,
                     ),

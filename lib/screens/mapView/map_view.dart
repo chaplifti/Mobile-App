@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:ui' as ui;
+
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,7 +19,7 @@ class _MapViewScreenState extends State<MapViewScreen> {
   GoogleMapController? mapController;
 
   static const CameraPosition currentPosition = CameraPosition(
-    target: LatLng(22.535524, 88.365300),
+    target: LatLng(-6.7920480427905, 39.2712279732554),
     zoom: 12.00,
   );
 
@@ -35,7 +36,7 @@ class _MapViewScreenState extends State<MapViewScreen> {
   final markerPointList = [
     {
       "image": "assets/mapView/ride-start-icon.png",
-      "latLang": const LatLng(22.548208, 88.334758)
+      "latLang": const LatLng(-6.7920480427905, 39.2712279732554)
     },
     {
       "image": "assets/mapView/destinationicon.png",

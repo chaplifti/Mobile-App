@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.light));
     return MaterialApp(
-      title: 'Go Poolar',
+      title: 'Chap Lifti',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

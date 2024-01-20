@@ -72,12 +72,9 @@ class _WalletScreenState extends State<WalletScreen> {
       ),
       child: Column(
         children: [
-          Visibility(
-            visible: _isTextVisible,
-            child: const Text(
-              "TZS 100,500/=",
-              style: medium30Primary,
-            ),
+          Text(
+            _isTextVisible ? "TZS 100,500" : "*****",
+            style: medium30Primary,
           ),
           ElevatedButton(
             onPressed: _toggleTextVisibility,

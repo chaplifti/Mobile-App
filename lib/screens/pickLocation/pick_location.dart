@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'dart:ui' as ui;
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,8 +22,8 @@ class _PickLocationScreenState extends State<PickLocationScreen> {
 
   TextEditingController searchController = TextEditingController();
 
-  static CameraPosition locationposition =
-      const CameraPosition(target: LatLng(51.5403, 0.1482), zoom: 10.46);
+  static CameraPosition locationposition = const CameraPosition(
+      target: LatLng(-6.787360782866734, 39.27123535111817), zoom: 13.00);
 
   Map<String, Marker> markers = {};
 
@@ -36,7 +37,7 @@ class _PickLocationScreenState extends State<PickLocationScreen> {
 
   void defaultAddress() async {
     List<Placemark> defaultPlace =
-        await placemarkFromCoordinates(51.5403, 0.1482);
+        await placemarkFromCoordinates(-6.787360782866734, 39.27123535111817);
 
     Placemark placeMark = defaultPlace.first;
     String street = placeMark.street!;
@@ -190,6 +191,7 @@ class _PickLocationScreenState extends State<PickLocationScreen> {
 
   googleMap() {
     return GoogleMap(
+      mapType: MapType.normal,
       initialCameraPosition: locationposition,
       onTap: (LatLng latLng) async {
         const MarkerId markerId = MarkerId('yourLocation');
@@ -228,7 +230,7 @@ class _PickLocationScreenState extends State<PickLocationScreen> {
         mapcontroller.complete(controller);
         addMarker(
           'yourLocation',
-          const LatLng(51.5403, 0.1482),
+          const LatLng(-6.787360782866734, 39.27123535111817),
         );
       },
       markers: markers.values.toSet(),

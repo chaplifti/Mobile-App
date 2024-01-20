@@ -66,7 +66,7 @@
             android:value="2" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR GOOGLE MAP API KEY HERE" />
+            android:value="AIzaSyBrOZvbbFswM_Aunpt5v6aFg7r2MPrKKjg" />
 
         <uses-library
             android:name="androidx.window.extensions"
