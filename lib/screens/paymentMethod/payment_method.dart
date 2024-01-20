@@ -68,7 +68,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
           ],
         ),
         child: const Text(
-          "Add amount (\$50.00)",
+          "Add amount (TZS 50.00)",
           style: bold18White,
           textAlign: TextAlign.center,
           overflow: TextOverflow.ellipsis,

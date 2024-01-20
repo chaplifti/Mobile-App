@@ -25,7 +25,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     {
       "title": "Add money",
       "description":
-          "Congratulation \$10.00 successfully added in your wallet.",
+          "Congratulation TZS 10.00 successfully added in your wallet.",
       "time": "2min"
     },
     {

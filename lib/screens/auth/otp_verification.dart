@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:pinput/pinput.dart';
 import 'package:rc_fl_gopoolar/theme/theme.dart';
 
@@ -189,47 +188,32 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
     );
   }
 
-  // pleaseWaitDialog() {
-  //   return showDialog(
-  //     barrierDismissible: false,
-  //     context: context,
-  //     builder: (context) {
-  //       return Dialog(
-  //         backgroundColor: whiteColor,
-  //         shape: RoundedRectangleBorder(
-  //           borderRadius: BorderRadius.circular(10.0),
-  //         ),
-  //         child: ListView(
-  //           shrinkWrap: true,
-  //           physics: const BouncingScrollPhysics(),
-  //           padding: const EdgeInsets.symmetric(vertical: fixPadding * 3.5),
-  //           children: const [
-  //             CupertinoActivityIndicator(
-  //               color: primaryColor,
-  //               radius: 15.0,
-  //             ),
-  //             heightSpace,
-  //             Text(
-  //               "Please wait",
-  //               style: semibold18Primary,
-  //               textAlign: TextAlign.center,
-  //             )
-  //           ],
-  //         ),
-  //       );
-  //     },
-  //   );
-  // }
-
   pleaseWaitDialog() {
     return showDialog(
       barrierDismissible: false,
       context: context,
       builder: (context) {
-        return Center(
-          child: LoadingAnimationWidget.staggeredDotsWave(
-            color: Colors.white,
-            size: 70,
+        return Dialog(
+          backgroundColor: whiteColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          child: ListView(
+            shrinkWrap: true,
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(vertical: fixPadding * 3.5),
+            children: const [
+              CupertinoActivityIndicator(
+                color: primaryColor,
+                radius: 15.0,
+              ),
+              heightSpace,
+              Text(
+                "Please wait",
+                style: semibold18Primary,
+                textAlign: TextAlign.center,
+              )
+            ],
           ),
         );
       },

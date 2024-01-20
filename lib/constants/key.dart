@@ -1,1 +1,1 @@
-const String googleMapApiKey = "YOUR GOOGLE MAP API KEY HERE";
+const String googleMapApiKey = "AIzaSyBrOZvbbFswM_Aunpt5v6aFg7r2MPrKKjg";

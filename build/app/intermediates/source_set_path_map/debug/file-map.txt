@@ -1,0 +1,21 @@
+com.example.rc_fl_gopoolar.app-jetified-play-services-maps-18.2.0-0 /home/sydney/.gradle/caches/transforms-3/10573cd3896b16f5dcfdc7ca46129976/transformed/jetified-play-services-maps-18.2.0/res
+com.example.rc_fl_gopoolar.app-jetified-window-1.0.0-beta04-1 /home/sydney/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/res
+com.example.rc_fl_gopoolar.app-jetified-play-services-basement-18.1.0-2 /home/sydney/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/res
+com.example.rc_fl_gopoolar.app-jetified-annotation-experimental-1.1.0-3 /home/sydney/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.rc_fl_gopoolar.app-core-1.6.0-4 /home/sydney/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res
+com.example.rc_fl_gopoolar.app-jetified-play-services-auth-20.4.0-5 /home/sydney/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/res
+com.example.rc_fl_gopoolar.app-jetified-play-services-base-18.0.1-6 /home/sydney/.gradle/caches/transforms-3/aba8f806953ea3dd8f794da3aeb78a12/transformed/jetified-play-services-base-18.0.1/res
+com.example.rc_fl_gopoolar.app-jetified-window-java-1.0.0-beta04-7 /home/sydney/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.rc_fl_gopoolar.app-debug-8 /home/sydney/OffJob/CHAP LIFT/android/app/src/debug/res
+com.example.rc_fl_gopoolar.app-main-9 /home/sydney/OffJob/CHAP LIFT/android/app/src/main/res
+com.example.rc_fl_gopoolar.app-pngs-10 /home/sydney/OffJob/CHAP LIFT/build/app/generated/res/pngs/debug
+com.example.rc_fl_gopoolar.app-resValues-11 /home/sydney/OffJob/CHAP LIFT/build/app/generated/res/resValues/debug
+com.example.rc_fl_gopoolar.app-rs-12 /home/sydney/OffJob/CHAP LIFT/build/app/generated/res/rs/debug
+com.example.rc_fl_gopoolar.app-mergeDebugResources-13 /home/sydney/OffJob/CHAP LIFT/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.rc_fl_gopoolar.app-mergeDebugResources-14 /home/sydney/OffJob/CHAP LIFT/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.rc_fl_gopoolar.app-merged_res-15 /home/sydney/OffJob/CHAP LIFT/build/app/intermediates/merged_res/debug
+com.example.rc_fl_gopoolar.app-packaged_res-16 /home/sydney/OffJob/CHAP LIFT/build/flutter_credit_card/intermediates/packaged_res/debug
+com.example.rc_fl_gopoolar.app-packaged_res-17 /home/sydney/OffJob/CHAP LIFT/build/flutter_plugin_android_lifecycle/intermediates/packaged_res/debug
+com.example.rc_fl_gopoolar.app-packaged_res-18 /home/sydney/OffJob/CHAP LIFT/build/geocoding_android/intermediates/packaged_res/debug
+com.example.rc_fl_gopoolar.app-packaged_res-19 /home/sydney/OffJob/CHAP LIFT/build/google_maps_flutter_android/intermediates/packaged_res/debug
+com.example.rc_fl_gopoolar.app-packaged_res-20 /home/sydney/OffJob/CHAP LIFT/build/smart_auth/intermediates/packaged_res/debug

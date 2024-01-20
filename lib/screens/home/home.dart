@@ -16,6 +16,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String selectedValue = 'Vehicle Type';
+  List<String> dropdownItems = [
+    'Vehicle Type',
+    'Bus',
+    'Coaster',
+    'SUV',
+    'SAV',
+    'Saloon'
+  ];
+
   GoogleMapController? mapController;
 
   TextEditingController dateAndTimeController = TextEditingController();
@@ -102,8 +112,13 @@ class _HomeScreenState extends State<HomeScreen> {
             heightSpace,
             heightSpace,
             destinationLocationAddress(context),
+            heightSpace,
+            heightSpace,
             Padding(
-              padding: const EdgeInsets.all(fixPadding * 2.0),
+              padding: const EdgeInsets.only(
+                left: fixPadding * 2.0,
+                right: fixPadding * 2.0,
+              ),
               child: Row(
                 children: [
                   dateAndTimeField(size),
@@ -112,6 +127,46 @@ class _HomeScreenState extends State<HomeScreen> {
                       : const SizedBox(),
                   selectedTab == 0 ? noOfSeatField(size) : const SizedBox(),
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(fixPadding * 2.0),
+              child: Container(
+                width: double.infinity, // Set width to full width
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: whiteColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: blackColor.withOpacity(0.15),
+                      blurRadius: 6.0,
+                    ),
+                  ],
+                ),
+                child: DropdownButtonHideUnderline(
+                  // Hide the default underline
+                  child: DropdownButton<String>(
+                    value: selectedValue,
+                    onChanged: (newValue) {
+                      setState(() {
+                        selectedValue = newValue!;
+                      });
+                    },
+                    items: dropdownItems.map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Row(
+                          // You can modify this to include images
+                          children: [
+                            // Add your image widget here if needed
+                            const SizedBox(width: 8), // Adjust spacing
+                            Text(value),
+                          ],
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
               ),
             ),
             selectedTab == 0 ? findRideButton() : continueButton()

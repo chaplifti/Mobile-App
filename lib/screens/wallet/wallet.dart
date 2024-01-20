@@ -11,6 +11,14 @@ class WalletScreen extends StatefulWidget {
 }
 
 class _WalletScreenState extends State<WalletScreen> {
+  bool _isTextVisible = false;
+
+  void _toggleTextVisibility() {
+    setState(() {
+      _isTextVisible = !_isTextVisible;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -56,26 +64,30 @@ class _WalletScreenState extends State<WalletScreen> {
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
           BoxShadow(
-            color: blackColor.withOpacity(0.1),
-            blurRadius: 12.0,
-            offset: const Offset(0, 6),
+            color: blackColor.withOpacity(0.08),
+            blurRadius: 15.0,
+            offset: const Offset(0, 5),
           )
         ],
       ),
       child: Column(
         children: [
-          const Text(
-            "\$150",
-            style: medium30Primary,
+          Visibility(
+            visible: _isTextVisible,
+            child: const Text(
+              "TZS 100,500/=",
+              style: medium30Primary,
+            ),
+          ),
+          ElevatedButton(
+            onPressed: _toggleTextVisibility,
+            child: Text(_isTextVisible ? 'Hide Balance' : 'Show Balance'),
           ),
           heightSpace,
-          height5Space,
           const Text(
             "Available balance",
             style: medium18Grey,
           ),
-          heightSpace,
-          heightSpace,
           heightSpace,
           height5Space,
           optionWidget(
@@ -91,13 +103,13 @@ class _WalletScreenState extends State<WalletScreen> {
             Navigator.pushNamed(context, '/addAndSendMoney',
                 arguments: {"id": 0});
           }),
-          heightSpace,
+          /*heightSpace,
           heightSpace,
           optionWidget(Mdi.credit_card_outline, "Send  to bank",
               "Easily send money in bank", () {
             Navigator.pushNamed(context, '/addAndSendMoney',
                 arguments: {"id": 1});
-          }),
+          }),*/
         ],
       ),
     );
@@ -115,7 +127,7 @@ class _WalletScreenState extends State<WalletScreen> {
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             BoxShadow(
-              color: blackColor.withOpacity(0.15),
+              color: blackColor.withOpacity(0.1),
               blurRadius: 6.0,
             ),
           ],

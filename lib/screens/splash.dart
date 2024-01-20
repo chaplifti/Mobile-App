@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: size.height * 0.125,
             ),
             const Text(
-              "Go Poolar",
+              "Chap Lifti",
               style: semibold28White,
               textAlign: TextAlign.center,
             )

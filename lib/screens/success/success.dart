@@ -1,5 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rc_fl_gopoolar/theme/theme.dart';
 
 class SuccessScreen extends StatefulWidget {
@@ -61,11 +64,12 @@ class _SuccessScreenState extends State<SuccessScreen> {
           padding: const EdgeInsets.all(fixPadding * 2.0),
           children: [
             Center(
-              child: Image.asset(
+              child: Lottie.asset('lottie_assets/success_payment.json'),
+              /*Image.asset(
                 "assets/success/driving-pana.png",
                 height: size.height * 0.2,
                 fit: BoxFit.cover,
-              ),
+              ),*/
             ),
             heightSpace,
             heightSpace,

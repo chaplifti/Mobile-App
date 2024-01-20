@@ -47,7 +47,7 @@ dependencies:
   #custom packages
   lottie:
   rename:
-  loading_animation_widget:
+  concentric_transition: ^1.0.3
 
 dev_dependencies:
   flutter_test:

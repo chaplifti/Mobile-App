@@ -9,6 +9,15 @@ class AddAndSendMoneyScreen extends StatefulWidget {
 }
 
 class _AddAndSendMoneyScreenState extends State<AddAndSendMoneyScreen> {
+  String selectedValue = 'Select Network';
+  List<String> dropdownItems = [
+    'Select Network',
+    'Airtel Money',
+    'HaloPesa',
+    'M-Pesa',
+    'Tigo Pesa'
+  ];
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -36,7 +45,7 @@ class _AddAndSendMoneyScreenState extends State<AddAndSendMoneyScreen> {
           ),
         ),
         title: Text(
-          id == 0 ? "Add money" : "Send to bank",
+          id == 0 ? "Deposit money" : "Send to bank",
           style: semibold18White,
         ),
       ),
@@ -54,9 +63,6 @@ class _AddAndSendMoneyScreenState extends State<AddAndSendMoneyScreen> {
           amountField(id),
           heightSpace,
           heightSpace,
-          heightSpace,
-          heightSpace,
-          height5Space,
           continueButton(id),
         ],
       ),
@@ -66,9 +72,10 @@ class _AddAndSendMoneyScreenState extends State<AddAndSendMoneyScreen> {
   continueButton(id) {
     return GestureDetector(
       onTap: () {
-        id == 0
-            ? Navigator.pushNamed(context, '/paymentMethod')
-            : Navigator.pushNamed(context, '/bankInformation');
+        /*id == 0
+            ? Navigator.pushNamed(context, '/paymentSuccess')
+            : Navigator.pushNamed(context, '/bankInformation');*/
+        Navigator.pushNamed(context, '/paymentSuccess', arguments: {"id": 0});
       },
       child: Container(
         width: double.maxFinite,
@@ -102,7 +109,81 @@ class _AddAndSendMoneyScreenState extends State<AddAndSendMoneyScreen> {
           id == 0 ? "Add amount" : "Add amount to send",
           style: semibold15Black33,
         ),
-        heightSpace,
+        const SizedBox(
+          height: 10,
+        ),
+        Container(
+          width: double.infinity, // Set width to full width
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: whiteColor,
+            boxShadow: [
+              BoxShadow(
+                color: blackColor.withOpacity(0.15),
+                blurRadius: 6.0,
+              ),
+            ],
+          ),
+          child: DropdownButtonHideUnderline(
+            // Hide the default underline
+            child: DropdownButton<String>(
+              value: selectedValue,
+              onChanged: (newValue) {
+                setState(() {
+                  selectedValue = newValue!;
+                });
+              },
+              items: dropdownItems.map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Row(
+                    // You can modify this to include images
+                    children: [
+                      // Add your image widget here if needed
+                      SizedBox(width: 8), // Adjust spacing
+                      Text(value),
+                    ],
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: whiteColor,
+            boxShadow: [
+              BoxShadow(
+                color: blackColor.withOpacity(0.15),
+                blurRadius: 6.0,
+              )
+            ],
+          ),
+          child: TextField(
+            style: semibold15Black33,
+            cursorColor: primaryColor,
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: id == 0 ? "Enter Phone Number" : "Enter amount to send",
+              hintStyle: medium15Grey,
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: fixPadding,
+                vertical: fixPadding * 1.5,
+              ),
+              prefixText: "255 ",
+              prefixStyle: semibold15Black33,
+              isDense: true,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
@@ -127,12 +208,12 @@ class _AddAndSendMoneyScreenState extends State<AddAndSendMoneyScreen> {
                 horizontal: fixPadding,
                 vertical: fixPadding * 1.5,
               ),
-              prefixText: "\$",
+              prefixText: "TZS ",
               prefixStyle: semibold15Black33,
               isDense: true,
             ),
           ),
-        )
+        ),
       ],
     );
   }

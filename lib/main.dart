@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:rc_fl_gopoolar/theme/theme.dart';
+import 'package:rc_fl_gopoolar/screens/onboarding/intro_onboarding.dart';
 import 'package:rc_fl_gopoolar/screens/screens.dart';
+import 'package:rc_fl_gopoolar/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
             settings: settings);
       case '/onboarding':
         return PageTransition(
-            child: const OnboardingScreen(),
+            child: const IntroScreen(),
             type: PageTransitionType.fade,
             settings: settings);
       case '/login':

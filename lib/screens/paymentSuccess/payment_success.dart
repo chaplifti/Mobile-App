@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rc_fl_gopoolar/theme/theme.dart';
 
 class PaymentSuccessScreen extends StatefulWidget {
@@ -19,6 +20,7 @@ class _PaymentSuccessScreenState extends State<PaymentSuccessScreen> {
 
     final id = data['id'];
 
+    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () async {
         onWillpop();
@@ -61,16 +63,17 @@ class _PaymentSuccessScreenState extends State<PaymentSuccessScreen> {
           padding: const EdgeInsets.all(fixPadding * 2.0),
           children: [
             Center(
-              child: Image.asset(
+              child: Lottie.asset('assets/lottie_assets/success_payment.json'),
+              /*Image.asset(
                 "assets/success/checkmark.png",
                 height: size.height * 0.1,
                 fit: BoxFit.cover,
-              ),
+              ),*/
             ),
             heightSpace,
             heightSpace,
             Text(
-              id == 1 ? "\$150.00 sended" : "\$150.00 added",
+              id == 0 ? "TZS 150.00 sended" : "TZS 150.00 added",
               style: semibold20Primary,
               textAlign: TextAlign.center,
             ),

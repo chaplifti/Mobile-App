@@ -39,14 +39,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 mobileNumberField(),
                 heightSpace,
                 heightSpace,
-                passwordField(),
-                heightSpace,
-                heightSpace,
-                passwordConfirmField(),
-                heightSpace,
-                heightSpace,
-                heightSpace,
-                heightSpace,
                 heightSpace,
                 heightSpace,
                 registerButton(),
@@ -137,73 +129,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
         keyboardType: TextInputType.name,
         decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: "Enter your full names",
+          hintText: "Enter your name",
           hintStyle: semibold15Grey,
           contentPadding: EdgeInsets.symmetric(vertical: fixPadding * 1.4),
           prefixIcon: Icon(
             CupertinoIcons.person,
-            size: 20.0,
-          ),
-        ),
-      ),
-    );
-  }
-
-  passwordField() {
-    return Container(
-      decoration: BoxDecoration(
-        color: whiteColor,
-        borderRadius: BorderRadius.circular(10.0),
-        boxShadow: [
-          BoxShadow(
-            color: blackColor.withOpacity(0.1),
-            blurRadius: 12.0,
-            offset: const Offset(0, 6),
-          )
-        ],
-      ),
-      child: const TextField(
-        cursorColor: primaryColor,
-        style: semibold15Black33,
-        keyboardType: TextInputType.name,
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          hintText: "Enter password",
-          hintStyle: semibold15Grey,
-          contentPadding: EdgeInsets.symmetric(vertical: fixPadding * 1.4),
-          prefixIcon: Icon(
-            CupertinoIcons.lock,
-            size: 20.0,
-          ),
-        ),
-      ),
-    );
-  }
-
-  passwordConfirmField() {
-    return Container(
-      decoration: BoxDecoration(
-        color: whiteColor,
-        borderRadius: BorderRadius.circular(10.0),
-        boxShadow: [
-          BoxShadow(
-            color: blackColor.withOpacity(0.1),
-            blurRadius: 12.0,
-            offset: const Offset(0, 6),
-          )
-        ],
-      ),
-      child: const TextField(
-        cursorColor: primaryColor,
-        style: semibold15Black33,
-        keyboardType: TextInputType.name,
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          hintText: "Confirm password",
-          hintStyle: semibold15Grey,
-          contentPadding: EdgeInsets.symmetric(vertical: fixPadding * 1.4),
-          prefixIcon: Icon(
-            CupertinoIcons.lock,
             size: 20.0,
           ),
         ),
@@ -246,7 +176,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: fixPadding * 2.0),
       child: Text(
-        "Welcome, please create your account",
+        "Welcome, please create your account using email address",
         style: medium15Grey,
         textAlign: TextAlign.center,
       ),
@@ -264,7 +194,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   headerImage(Size size) {
     return Container(
       width: double.maxFinite,
-      height: size.height * 0.3,
+      height: size.height * 0.4,
       color: primaryColor,
       alignment: Alignment.center,
       child: Stack(

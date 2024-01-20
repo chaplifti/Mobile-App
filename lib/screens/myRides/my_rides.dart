@@ -45,7 +45,39 @@ class _MyRidesScreenState extends State<MyRidesScreen> {
       "destination": "Pune,2464 Royal Ln. Mesa"
     },
     {
+      "image": "assets/myRides/image-3.png",
+      "name": "Savannah Nguyen",
+      "date": "25 jan 2023",
+      "time": "9:00 am",
+      "pickup": "Mumbai,2464 Royal Ln. Mesa",
+      "destination": "Pune,2464 Royal Ln. Mesa"
+    },
+    {
       "image": "assets/myRides/image-5.png",
+      "name": "Savannah Nguyen",
+      "date": "25 jan 2023",
+      "time": "9:00 am",
+      "pickup": "Mumbai,2464 Royal Ln. Mesa",
+      "destination": "Pune,2464 Royal Ln. Mesa"
+    },
+    {
+      "image": "assets/myRides/image-1.png",
+      "name": "Savannah Nguyen",
+      "date": "25 jan 2023",
+      "time": "9:00 am",
+      "pickup": "Mumbai,2464 Royal Ln. Mesa",
+      "destination": "Pune,2464 Royal Ln. Mesa"
+    },
+    {
+      "image": "assets/myRides/image-4.png",
+      "name": "Savannah Nguyen",
+      "date": "25 jan 2023",
+      "time": "9:00 am",
+      "pickup": "Mumbai,2464 Royal Ln. Mesa",
+      "destination": "Pune,2464 Royal Ln. Mesa"
+    },
+    {
+      "image": "assets/myRides/image-2.png",
       "name": "Savannah Nguyen",
       "date": "25 jan 2023",
       "time": "9:00 am",
@@ -81,7 +113,7 @@ class _MyRidesScreenState extends State<MyRidesScreen> {
     return Center(
       child: ListView(
         physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.all(fixPadding * 2.0),
+        padding: const EdgeInsets.all(fixPadding * 0.01),
         shrinkWrap: true,
         children: [
           Image.asset(
@@ -102,7 +134,7 @@ class _MyRidesScreenState extends State<MyRidesScreen> {
   ridesListContent(Size size) {
     return ListView.builder(
       padding: const EdgeInsets.symmetric(
-          horizontal: fixPadding * 2.0, vertical: fixPadding),
+          horizontal: fixPadding * 0.8, vertical: fixPadding),
       physics: const BouncingScrollPhysics(),
       itemCount: ridesList.length,
       itemBuilder: (context, index) {
@@ -125,7 +157,7 @@ class _MyRidesScreenState extends State<MyRidesScreen> {
               borderRadius: BorderRadius.circular(10.0),
               boxShadow: [
                 BoxShadow(
-                  color: blackColor.withOpacity(0.15),
+                  color: blackColor.withOpacity(0.08),
                   blurRadius: 6.0,
                 )
               ],
