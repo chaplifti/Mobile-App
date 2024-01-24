@@ -19,6 +19,9 @@ const Color d9E3EAColor = Color(0xFFD9E3EA);
 const Color darkBlueColor = Color(0xFF1E4799);
 const Color darkGreenColor = Color(0xFF1E996D);
 const Color darkRedColor = Color(0xFFD2182D);
+const Color gradientStartColor = Color(0xFF1f4590);
+const Color greyBorderColor = Color(0xFFcfd6e4);
+const Color gradientEndColor = Color(0xFF234591);
 
 const double fixPadding = 7.0;
 

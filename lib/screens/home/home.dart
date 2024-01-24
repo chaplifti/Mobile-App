@@ -16,6 +16,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  Map<int, Widget> pointsLocations = {};
+  int locationCounter = 0;
+
   String selectedValue = 'Vehicle Type';
   List<String> dropdownItems = [
     'Vehicle Type',
@@ -45,6 +48,25 @@ class _HomeScreenState extends State<HomeScreen> {
   String? destinationLocation;
 
   DateTime date = DateTime.now();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  void addNewLocation() {
+    setState(() {
+      pointsLocations[locationCounter] = pointsLocationAddress(
+          context, locationCounter, () => deleteLocation(locationCounter));
+      locationCounter++;
+    });
+  }
+
+  void deleteLocation(int id) {
+    setState(() {
+      pointsLocations.remove(id);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  bottombox(BuildContext context, Size size) {
+  Widget bottombox(BuildContext context, Size size) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
@@ -111,66 +133,22 @@ class _HomeScreenState extends State<HomeScreen> {
             pickupLocation(context),
             heightSpace,
             heightSpace,
+
+            // Conditional rendering based on selectedTab
+            if (selectedTab == 1)
+              for (var entry in pointsLocations.entries)
+                Column(
+                  children: [
+                    entry.value,
+                    heightSpace,
+                    heightSpace,
+                  ],
+                ),
+
             destinationLocationAddress(context),
             heightSpace,
             heightSpace,
-            Padding(
-              padding: const EdgeInsets.only(
-                left: fixPadding * 2.0,
-                right: fixPadding * 2.0,
-              ),
-              child: Row(
-                children: [
-                  dateAndTimeField(size),
-                  selectedTab == 0
-                      ? widthBox(fixPadding * 1.5)
-                      : const SizedBox(),
-                  selectedTab == 0 ? noOfSeatField(size) : const SizedBox(),
-                ],
-              ),
-            ),
-            heightSpace,
-            heightSpace,
-            /*Padding(
-              padding: const EdgeInsets.all(fixPadding * 2.0),
-              child: Container(
-                width: double.infinity, // Set width to full width
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: whiteColor,
-                  boxShadow: [
-                    BoxShadow(
-                      color: blackColor.withOpacity(0.15),
-                      blurRadius: 6.0,
-                    ),
-                  ],
-                ),
-                child: DropdownButtonHideUnderline(
-                  // Hide the default underline
-                  child: DropdownButton<String>(
-                    value: selectedValue,
-                    onChanged: (newValue) {
-                      setState(() {
-                        selectedValue = newValue!;
-                      });
-                    },
-                    items: dropdownItems.map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Row(
-                          // You can modify this to include images
-                          children: [
-                            // Add your image widget here if needed
-                            const SizedBox(width: 8), // Adjust spacing
-                            Text(value),
-                          ],
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                ),
-              ),
-            ),*/
+            // ... rest of your code ...
             selectedTab == 0 ? findRideButton() : continueButton()
           ],
         ),
@@ -751,6 +729,84 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  pointsLocationAddress(
+      BuildContext context, int locationCounter, void Function() param2) {
+    return GestureDetector(
+      onTap: () async {
+        final result = await Navigator.pushNamed(context, '/pickLocation');
+        if (result != null) {
+          setState(() {
+            destinationLocation = result.toString();
+          });
+        }
+      },
+      child: Container(
+        padding: const EdgeInsets.all(fixPadding * 1.4),
+        margin: const EdgeInsets.symmetric(horizontal: fixPadding * 2.0),
+        decoration: BoxDecoration(
+            color: whiteColor,
+            borderRadius: BorderRadius.circular(8.0),
+            boxShadow: [
+              BoxShadow(
+                color: blackColor.withOpacity(0.15),
+                blurRadius: 6.0,
+              )
+            ]),
+        child: Row(
+          children: [
+            locationIcon(black3CColor),
+            widthSpace,
+            width5Space,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Point location",
+                    style: semibold15Black33,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  height5Space,
+                  Text(
+                    destinationLocation != null
+                        ? destinationLocation.toString()
+                        : "Select location",
+                    style: medium14Grey,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 4,
+                    offset: Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: IconButton(
+                icon: Icon(Icons.delete, color: Colors.black),
+                onPressed: () => deleteLocation(locationCounter),
+                iconSize: 24.0,
+                splashRadius: 20.0,
+                splashColor: Colors.grey.withOpacity(0.5),
+                padding: EdgeInsets.all(8.0),
+                constraints: BoxConstraints(),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
   pickupLocation(BuildContext context) {
     return GestureDetector(
       onTap: () async {
@@ -798,7 +854,35 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-            )
+            ),
+            selectedTab == 0 ? widthBox(fixPadding * 1.5) : const SizedBox(),
+            selectedTab == 1
+                ? Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 4,
+                          offset: Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: IconButton(
+                      icon: Icon(Icons.add, color: Colors.black),
+                      onPressed: () {
+                        addNewLocation();
+                      },
+                      iconSize: 24.0,
+                      splashRadius: 20.0,
+                      splashColor: Colors.grey.withOpacity(0.5),
+                      padding: EdgeInsets.all(8.0),
+                      constraints: BoxConstraints(),
+                    ),
+                  )
+                : const SizedBox(),
           ],
         ),
       ),
@@ -822,44 +906,112 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  tabBar() {
+  // tabBar() {
+  //   return Container(
+  //     margin: const EdgeInsets.fromLTRB(
+  //         fixPadding * 2.0, fixPadding, fixPadding * 2.0, fixPadding * 2.0),
+  //     clipBehavior: Clip.hardEdge,
+  //     decoration: BoxDecoration(
+  //       color: f8Color,
+  //       borderRadius: BorderRadius.circular(10.0),
+  //       boxShadow: [
+  //         BoxShadow(
+  //           color: blackColor.withOpacity(0.15),
+  //           blurRadius: 6.0,
+  //         ),
+  //       ],
+  //     ),
+  //     child: Row(
+  //       children: List.generate(
+  //         tabList.length,
+  //         (index) => Expanded(
+  //           child: GestureDetector(
+  //             onTap: () {
+  //               setState(() {
+  //                 selectedTab = index;
+  //               });
+  //             },
+  //             child: Container(
+  //               padding: const EdgeInsets.symmetric(
+  //                   vertical: fixPadding * 1.3, horizontal: fixPadding),
+  //               color: selectedTab == index ? secondaryColor : f8Color,
+  //               alignment: Alignment.center,
+  //               child: Text(
+  //                 tabList[index].toString(),
+  //                 style:
+  //                     selectedTab == index ? semibold15White : semibold15Grey,
+  //               ),
+  //             ),
+  //           ),
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
+
+  Widget tabBar() {
     return Container(
       margin: const EdgeInsets.fromLTRB(
           fixPadding * 2.0, fixPadding, fixPadding * 2.0, fixPadding * 2.0),
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: f8Color,
+        color: screenBgColor, // Set the background color to transparent
         borderRadius: BorderRadius.circular(10.0),
         boxShadow: [
           BoxShadow(
             color: blackColor.withOpacity(0.15),
             blurRadius: 6.0,
+            spreadRadius: 1.0,
           ),
         ],
       ),
       child: Row(
+        mainAxisAlignment:
+            MainAxisAlignment.spaceEvenly, // Distributes the children evenly
         children: List.generate(
-          tabList.length,
-          (index) => Expanded(
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedTab = index;
-                });
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                    vertical: fixPadding * 1.3, horizontal: fixPadding),
-                color: selectedTab == index ? secondaryColor : f8Color,
-                alignment: Alignment.center,
-                child: Text(
-                  tabList[index].toString(),
-                  style:
-                      selectedTab == index ? semibold15White : semibold15Grey,
+          tabList.length * 2 - 1, // Adjust the number for the SizedBox
+          (index) {
+            if (index % 2 == 1) {
+              return SizedBox(width: 10); // Spacing between buttons
+            }
+            int tabIndex = index ~/ 2;
+            return Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedTab = tabIndex;
+                  });
+                },
+                child: AnimatedContainer(
+                  duration: Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                  padding: const EdgeInsets.symmetric(
+                      vertical: fixPadding * 1.3, horizontal: fixPadding),
+                  decoration: BoxDecoration(
+                    color: selectedTab == tabIndex ? secondaryColor : f8Color,
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: selectedTab == tabIndex
+                        ? Border.all(color: Colors.transparent)
+                        : Border.all(color: greyBorderColor),
+                    gradient: selectedTab == tabIndex
+                        ? const LinearGradient(
+                            colors: [gradientStartColor, gradientEndColor],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                          )
+                        : null,
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    tabList[tabIndex].toString(),
+                    style: selectedTab == tabIndex
+                        ? semibold15White
+                        : semibold15Grey,
+                  ),
                 ),
               ),
-            ),
-          ),
+            );
+          },
         ),
       ),
     );
