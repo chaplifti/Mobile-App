@@ -12,68 +12,52 @@ class RideHistoryScreen extends StatefulWidget {
 class _RideHistoryScreenState extends State<RideHistoryScreen> {
   final ridesList = [
     {
-      "image": "assets/myRides/image-5.png",
+      "image": "assets/myRides/download.jpg",
       "name": "Savannah Nguyen",
       "date": "18 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dodoma",
+      "destination": "Singida"
     },
     {
-      "image": "assets/myRides/image-3.png",
+      "image": "assets/myRides/download.jpg",
       "name": "Leslie Alexander",
       "date": "18 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dodoma",
+      "destination": "Singida"
     },
     {
-      "image": "assets/myRides/image-4.png",
+      "image": "assets/myRides/download.jpg",
       "name": "Guy Hawkins",
       "date": "19 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dodoma",
+      "destination": "Singida"
     },
     {
-      "image": "assets/myRides/image-2.png",
+      "image": "assets/myRides/download.jpg",
       "name": "Devon Lane",
       "date": "20 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dodoma",
+      "destination": "Singida"
     },
     {
-      "image": "assets/myRides/image-1.png",
+      "image": "assets/myRides/download.jpg",
       "name": "Jenny wilsom",
       "date": "21 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dodoma",
+      "destination": "Singida"
     },
     {
-      "image": "assets/rideDetail/rider-image.png",
-      "name": "Ralph Edwards",
-      "date": "21 jan 2023",
-      "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
-    },
-    {
-      "image": "assets/review/review-4.png",
-      "name": "Albert Flores",
-      "date": "21 jan 2023",
-      "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
-    },
-    {
-      "image": "assets/myRides/image.png",
+      "image": "assets/myRides/download.jpg",
       "name": "Jerome Bell",
       "date": "22 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dodoma",
+      "destination": "Singida"
     },
   ];
 

@@ -151,7 +151,7 @@ class _WalletTransactionScreenState extends State<WalletTransactionScreen> {
                       ),
                     ),
                     Text(
-                      "\$${transactionList[index]['amount']}",
+                      "TZS ${transactionList[index]['amount']}",
                       style: transactionList[index]['expense'] == true
                           ? semibold16Red
                           : semibold16Green,

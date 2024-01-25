@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="FL GoPoolar"
+        android:label="Chap Lifti"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
@@ -30,6 +30,6 @@
             android:name="flutterEmbedding"
             android:value="2" />
         <meta-data android:name="com.google.android.geo.API_KEY"
-                   android:value="YOUR GOOGLE MAP API KEY HERE"/>    
+                   android:value="AIzaSyBrOZvbbFswM_Aunpt5v6aFg7r2MPrKKjg"/>
     </application>
 </manifest>

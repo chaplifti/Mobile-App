@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
             color: blackColor.withOpacity(0.1),
             blurRadius: 12.0,
             offset: const Offset(0, 6),
-          )
+          ),
         ],
       ),
       child: const IntlPhoneField(

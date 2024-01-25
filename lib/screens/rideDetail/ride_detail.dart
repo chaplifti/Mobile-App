@@ -19,7 +19,7 @@ class _RideDetailScreenState extends State<RideDetailScreen> {
 
   final reviewList = [
     {
-      "image": "assets/review/review-7.png",
+      "image": "assets/review/download.jpg",
       "name": "Wade Warren",
       "date": "25 jan 2023",
       "rate": "4.8",
@@ -27,7 +27,7 @@ class _RideDetailScreenState extends State<RideDetailScreen> {
           "Lorem ipsum dolor sit amet consectetur. Allaliquam sit mollis adipiscing donec ut sed. Dictum dignissim enim condimentum vitae aliquam sed."
     },
     {
-      "image": "assets/review/review-3.png",
+      "image": "assets/review/download.jpg",
       "name": "Jenny wilsom",
       "date": "25 jan 2023",
       "rate": "3.5",

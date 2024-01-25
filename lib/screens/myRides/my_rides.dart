@@ -13,76 +13,76 @@ class MyRidesScreen extends StatefulWidget {
 class _MyRidesScreenState extends State<MyRidesScreen> {
   final ridesList = [
     {
-      "image": "assets/myRides/image-1.png",
-      "name": "Jenny wilsom",
+      "image": "assets/myRides/download.jpg",
+      "name": "Hemedi Kivuyo",
       "date": "Today",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Mbagala",
+      "destination": "Kariakoo"
     },
     {
-      "image": "assets/myRides/image-2.png",
-      "name": "Devon Lane",
+      "image": "assets/myRides/download.jpg",
+      "name": "Juma Msafiri",
       "date": "22 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Mbagala",
+      "destination": "Mbezi"
     },
     {
-      "image": "assets/myRides/image-3.png",
+      "image": "assets/myRides/download.jpg",
       "name": "Leslie Alexander",
       "date": "23 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dar es salaa",
+      "destination": "Morogoro"
     },
     {
-      "image": "assets/myRides/image-4.png",
-      "name": "Guy Hawkins",
+      "image": "assets/myRides/download.jpg",
+      "name": "Pamela Yuston",
       "date": "24 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Kisesa",
+      "destination": "Kilosa"
     },
     {
-      "image": "assets/myRides/image-3.png",
-      "name": "Savannah Nguyen",
+      "image": "assets/myRides/download.jpg",
+      "name": "Mtweve Karanda",
       "date": "25 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Muheza",
+      "destination": "Chalinza"
     },
     {
-      "image": "assets/myRides/image-5.png",
-      "name": "Savannah Nguyen",
+      "image": "assets/myRides/download.jpg",
+      "name": "Elia Mwabukusi",
       "date": "25 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Chimala",
+      "destination": "Chunya"
     },
     {
-      "image": "assets/myRides/image-1.png",
-      "name": "Savannah Nguyen",
+      "image": "assets/myRides/download.jpg",
+      "name": "Rweyemamu Rutashobya",
       "date": "25 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Kamachumu",
+      "destination": "Mleba"
     },
     {
-      "image": "assets/myRides/image-4.png",
-      "name": "Savannah Nguyen",
+      "image": "assets/myRides/download.jpg",
+      "name": "Bhoke Mkandara",
       "date": "25 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Dodoma",
+      "destination": "Singida"
     },
     {
-      "image": "assets/myRides/image-2.png",
-      "name": "Savannah Nguyen",
+      "image": "assets/myRides/download.jpg",
+      "name": "Amina Kilela",
       "date": "25 jan 2023",
       "time": "9:00 am",
-      "pickup": "Mumbai,2464 Royal Ln. Mesa",
-      "destination": "Pune,2464 Royal Ln. Mesa"
+      "pickup": "Stesheni",
+      "destination": "Mbagala"
     },
   ];
 
